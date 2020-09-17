@@ -1,0 +1,62 @@
+@import '../../definitions';
+
+.Header {
+
+}
+
+.Nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $dimHeightNav;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0 1rem;
+
+    &:first-child {
+      margin-left: 2rem;
+    }
+
+
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+
+  &__link {
+    padding: .25rem .5rem;
+
+    &--sign {
+      //margin: 0 0rem;
+    }
+
+    &--sign:first-child {
+      margin-left: 0;
+    }
+
+    &--sign:last-child {
+      margin-right: 0;
+    }
+
+    &--alt {
+      border: 2px solid $clrLink;
+      border-radius: .5rem;
+    }
+
+    &--alt.active {
+      border-color: $clrPri;
+    }
+  }
+}
+

@@ -1,0 +1,41 @@
+@import 'definitions';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $fontText;
+  background: $clrBg;
+  color: $clrText;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: $clrLink;
+  text-decoration: none;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    color: $clrText;
+  }
+
+  &.active {
+    color: $clrPri;
+  }
+}
+
+.section {
+  margin-bottom: 2rem;
+}

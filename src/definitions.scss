@@ -1,0 +1,29 @@
+/// Imports
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/// Fonts
+
+$fontFallbackSans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+$fontDisplay: 'Comfortaa', $fontFallbackSans;
+$fontText: 'Open Sans', $fontFallbackSans;
+
+/// Colors
+$clrBg: #111;
+$clrText: #fff;
+$clrTextDarker: #eee;
+$clrLink: #ccc;
+$clrPri: #47d794;
+$clrBlue: #5959d6;
+$clrGreen: #4a984a;
+$clrRed: #d85353;
+$clrPurple: #c655c6;
+$clrCyan: #5cc5c5;
+$clrYellow: #d2d26a;
+
+/// Dimensions
+$dimHeightNav: 3rem;
+
+/// Mixins
