@@ -9,13 +9,18 @@
 
   &__title {
     color: $clrPri;
+    font-size: 3rem;
     animation: highlight 3s ease-in-out;
   }
 
   &__previews {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(363px, auto));
     grid-gap: 2rem;
+  }
+
+  &__logo {
+    margin-bottom: 4rem;
   }
 }
 
@@ -27,8 +32,12 @@
   border-radius: 1rem;
   opacity: 0.9;
   transition: all 250ms ease-in-out;
-  padding: 1rem 0.25rem;
+  padding: 4rem 0.25rem 4rem 0.25rem;
   transform: translateY(0);
+
+  &__title {
+    font-size: 2rem;
+  }
 
   &:hover {
     opacity: 1;

@@ -19,8 +19,8 @@ export default function Home() {
             </div>
             <div className="section Home__previews">
                 <Preview link="https://beat.photonbeam.ch" title="beat.photonbeam.ch" subtitle="Project Management for Musicians" color="blue" />
-                <Preview link="https://beat.photonbeam.ch" title="music.photonbeam.ch" subtitle="Music Streaming Platform" color="green" />
-                <Preview link="https://beat.photonbeam.ch" title="chat.photonbeam.ch" subtitle="Chat Platform" color="purple" />
+                <Preview link="https://music.photonbeam.ch" title="music.photonbeam.ch" subtitle="Music Streaming Platform" color="green" />
+                <Preview link="https://chat.photonbeam.ch" title="chat.photonbeam.ch" subtitle="Chat Platform" color="purple" />
             </div>
         </section>
     );
