@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="photonbeam.ch" id="9cd6c357-9667-457a-a901-00b82dcfcad4" port="22" nameFormat="DESCRIPTIVE" username="photondan" />
+    </configs>
+  </component>
+</project>
