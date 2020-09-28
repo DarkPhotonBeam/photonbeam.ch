@@ -1,12 +1,18 @@
 const fs = require('fs')
-const path = require('path')
 const express = require('express')
 const dotenv = require('dotenv')
-const mysql = require('mysql')
-const crypto = require('crypto')
-//const bodyParser = require('body-parser')
-const app = express()
 dotenv.config()
+
+const DB = require('./classes/DB.js')
+
+const conn = new DB()
+
+const bodyParser = require('body-parser')
+
+// Routes
+const routeAccount = require('./api/account');
+
+const app = express()
 
 console.log(`Node Env: ${process.env.NODE_ENV}`)
 
@@ -30,8 +36,9 @@ const logger = (request, response, next) => {
     next()
 }
 
+app.use('/api/account', routeAccount)
 app.use(logger)
-//app.use(bodyParser)
+app.use(bodyParser.json())
 
 app.get('/api/test', (req, res) => {
     let response = {
@@ -39,7 +46,6 @@ app.get('/api/test', (req, res) => {
     }
     res.json(response)
 })
-
 
 app.listen(ENV !== 'development' ? socketPath : port, (err) => {
     if (err) {
@@ -56,24 +62,6 @@ app.listen(ENV !== 'development' ? socketPath : port, (err) => {
             // Development
             console.log('\x1b[36mListening on port ' + port + '\x1b[0m\n')
         }
-
-        // Test hash
-        console.log(sha512('test1234', salt).passwordHash === hash)
     }
 })
 
-const genRandomString = function(length){
-    return crypto.randomBytes(Math.ceil(length/2))
-        .toString('hex') /** convert to hexadecimal format */
-        .slice(0,length);   /** return required number of characters */
-};
-
-const sha512 = function(password, salt){
-    const hash = crypto.createHmac('sha512', salt); /** Hashing algorithm sha512 */
-    hash.update(password);
-    const value = hash.digest('hex');
-    return {
-        salt:salt,
-        passwordHash:value
-    };
-};
