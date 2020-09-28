@@ -27,3 +27,6 @@ client/build/
 client/node_modules/
 server/node_modules/
 production/
+
+server/.env
+client/.env
