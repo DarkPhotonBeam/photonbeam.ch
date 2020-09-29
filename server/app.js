@@ -11,7 +11,6 @@ const bodyParser = require('body-parser')
 
 // Routes
 const routeAccount = require('./api/account');
-
 const app = express()
 
 console.log(`Node Env: ${process.env.NODE_ENV}`)
